@@ -98,7 +98,8 @@ export class Main extends React.Component<Props, State> {
     const title = 'Avataaars Generator - Generate your own avataaars!'
     const imageURL = process.env.REACT_APP_IMG_RENDERER_URL + location.search
     return (
-      <main role='main'>
+      <>
+        {/* <main role='main'> */}
         <header className='header clearfix'>
           <h2 style={{ color: '#6A39D7' }}>
             avataaars generator
@@ -153,7 +154,8 @@ export class Main extends React.Component<Props, State> {
           height='560'
           ref={this.onCanvasRef}
         />
-      </main>
+        {/* </main> */}
+      </>
     )
   }
 

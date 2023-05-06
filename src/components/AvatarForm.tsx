@@ -36,7 +36,7 @@ class OptionSelect extends React.Component<SelectProps> {
           {label}
         </Col>
         <Col sm={9}>
-          <FormControl as='select' value={value} onChange={this.onChange}>
+          <FormControl as='select' value={value} onChange={() => this.onChange}>
             {children}
           </FormControl>
         </Col>
@@ -152,26 +152,26 @@ export default class AvatarForm extends React.Component<Props> {
             <Button
               variant='primary'
               type='submit'
-              onClick={this.onDownloadPNG}>
+              onClick={() => this.onDownloadPNG}>
               <i className='fa fa-download' /> PNG
             </Button>{' '}
             <Button
               variant='secondary'
               type='submit'
-              onClick={this.onDownloadSVG}>
+              onClick={() => this.onDownloadSVG}>
               <i className='fa fa-download' /> SVG
             </Button>{' '}
             <Button
               variant='secondary'
               type='submit'
-              onClick={this.onToggleCode}>
+              onClick={() => this.onToggleCode}>
               <i className='fa fa-code' />{' '}
               {displayingCode ? 'Hide React' : 'Show React'}
             </Button>{' '}
             <Button
               variant='secondary'
               type='submit'
-              onClick={this.onToggleImg}>
+              onClick={() => this.onToggleImg}>
               <i className='fa fa-code' />{' '}
               {displayingImg ? 'Hide <img>' : 'Show <img>'}
             </Button>
